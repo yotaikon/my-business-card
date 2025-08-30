@@ -1080,7 +1080,7 @@ def generate_html(personal_info):
                 </div>
             </div>
             
-            {f"""
+            """ + (f"""
             <div class="section education-container">
                 <h2>教育背景</h2>
                 {education_html}
@@ -1101,7 +1101,7 @@ def generate_html(personal_info):
                     <div class="info-value">持续关注技术发展趋势, 不断学习新技术</div>
                 </div>
             </div>
-            """}
+            """) + """
             
             {f"""
             <div class="section language-container">
