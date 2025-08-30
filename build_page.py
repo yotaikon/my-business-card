@@ -1082,7 +1082,7 @@ def generate_html(personal_info):
                   </div>
              </div>
             
-            {"""
+            {f"""
             <div class="section education-container">
                 <h2>教育背景</h2>
                 {education_html}
@@ -1105,21 +1105,21 @@ def generate_html(personal_info):
             </div>
             """}
             
-            {"""
+            {f"""
             <div class="section language-container">
                 <h2>语言能力</h2>
                 {language_html}
             </div>
             """ if personal_info['language_ability'] else ""}
             
-            {"""
+            {f"""
             <div class="section skills-container">
                 <h2>专业技能矩阵</h2>
                 {skills_html}
             </div>
             """ if personal_info['skills'] else ""}
             
-            {"""
+            {f"""
             <div class="section projects-section">
                 <h2>项目经历 ({len(personal_info['projects'])}个项目)</h2>
                 {projects_html}
