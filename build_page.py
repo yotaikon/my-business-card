@@ -552,8 +552,7 @@ def generate_html(personal_info):
         """
         projects_html += project_html
     
-    html_content = f"""
-<!DOCTYPE html>
+    html_content = f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -566,13 +565,13 @@ def generate_html(personal_info):
             box-sizing: border-box;
         }}
         
-                 body {{
-             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-             line-height: 1.6;
-             color: #333;
-             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-             min-height: 100vh;
-         }}
+        body {{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }}
         
         .container {{
             max-width: 1200px;
@@ -580,14 +579,14 @@ def generate_html(personal_info):
             padding: 20px;
         }}
         
-                 .header {{
-             background: rgba(255, 255, 255, 0.95);
-             border-radius: 15px;
-             padding: 30px;
-             margin-bottom: 22px;
-             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-             text-align: center;
-         }}
+        .header {{
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 22px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }}
         
         .header h1 {{
             color: #2c3e50;
@@ -601,151 +600,151 @@ def generate_html(personal_info):
             font-size: 1.2em;
         }}
         
-                 .content {{
-             display: block;
-         }}
-         
-         .basic-info-grid {{
-             display: grid;
-             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-             gap: 25px;
-             margin-bottom: 30px;
-         }}
+        .content {{
+            display: block;
+        }}
         
-                 .section {{
-             background: rgba(255, 255, 255, 0.98);
-             border-radius: 20px;
-             padding: 25px;
-             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-             transition: all 0.3s ease;
-             border: 1px solid rgba(255, 255, 255, 0.2);
-             backdrop-filter: blur(10px);
-             margin-bottom: 15px;
-         }}
-         
-         .section:hover {{
-             transform: translateY(-8px);
-             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-         }}
+        .basic-info-grid {{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }}
         
-                 .section h2 {{
-             color: #2c3e50;
-             font-size: 1.4em;
-             margin-bottom: 15px;
-             padding-bottom: 8px;
-             border-bottom: 3px solid #3498db;
-             position: relative;
-         }}
-         
-         .section h2::after {{
-             content: '';
-             position: absolute;
-             bottom: -3px;
-             left: 0;
-             width: 50px;
-             height: 3px;
-             background: linear-gradient(90deg, #3498db, #9b59b6);
-             border-radius: 2px;
-         }}
+        .section {{
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            margin-bottom: 15px;
+        }}
         
-                 .info-item {{
-             margin-bottom: 8px;
-             padding: 10px 15px;
-             background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-             border-radius: 8px;
-             border-left: 3px solid #3498db;
-             box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-             transition: all 0.3s ease;
-             display: flex;
-             align-items: center;
-             justify-content: space-between;
-         }}
-         
-         .info-row {{
-             display: flex;
-             gap: 20px;
-             margin-bottom: 8px;
-         }}
-         
-         .info-group {{
-             flex: 1;
-             display: flex;
-             align-items: center;
-             justify-content: space-between;
-             background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-             border-radius: 8px;
-             border-left: 3px solid #3498db;
-             box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-             transition: all 0.3s ease;
-             padding: 10px 15px;
-         }}
-         
-         .info-group:hover {{
-             transform: translateX(3px);
-             box-shadow: 0 2px 8px rgba(52, 152, 219, 0.15);
-             border-left-color: #9b59b6;
-         }}
-         
-         .info-item:hover {{
-             transform: translateX(3px);
-             box-shadow: 0 2px 8px rgba(52, 152, 219, 0.15);
-             border-left-color: #9b59b6;
-         }}
+        .section:hover {{
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }}
         
-                 .info-label {{
-             font-weight: 600;
-             color: #2c3e50;
-             font-size: 1em;
-             text-transform: uppercase;
-             letter-spacing: 0.5px;
-             min-width: 80px;
-         }}
-         
-         .info-value {{
-             color: #555;
-             font-size: 1.1em;
-             line-height: 1.3;
-             text-align: right;
-             flex: 1;
-         }}
+        .section h2 {{
+            color: #2c3e50;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #3498db;
+            position: relative;
+        }}
         
-                 .footer {{
-             text-align: center;
-             margin-top: 25px;
-             color: rgba(255, 255, 255, 0.8);
-             font-size: 0.9em;
-         }}
+        .section h2::after {{
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #3498db, #9b59b6);
+            border-radius: 2px;
+        }}
         
-                 .profile-image {{
-             width: 120px;
-             height: 120px;
-             border-radius: 50%;
-             background: linear-gradient(45deg, #3498db, #9b59b6);
-             margin: 0 auto 20px;
-             display: flex;
-             align-items: center;
-             justify-content: center;
-             color: white;
-             font-size: 3em;
-             font-weight: bold;
-         }}
+        .info-item {{
+            margin-bottom: 8px;
+            padding: 10px 15px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 8px;
+            border-left: 3px solid #3498db;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }}
+        
+        .info-row {{
+            display: flex;
+            gap: 20px;
+            margin-bottom: 8px;
+        }}
+        
+        .info-group {{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 8px;
+            border-left: 3px solid #3498db;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            padding: 10px 15px;
+        }}
+        
+        .info-group:hover {{
+            transform: translateX(3px);
+            box-shadow: 0 2px 8px rgba(52, 152, 219, 0.15);
+            border-left-color: #9b59b6;
+        }}
+        
+        .info-item:hover {{
+            transform: translateX(3px);
+            box-shadow: 0 2px 8px rgba(52, 152, 219, 0.15);
+            border-left-color: #9b59b6;
+        }}
+        
+        .info-label {{
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            min-width: 80px;
+        }}
+        
+        .info-value {{
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.3;
+            text-align: right;
+            flex: 1;
+        }}
+        
+        .footer {{
+            text-align: center;
+            margin-top: 25px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9em;
+        }}
+        
+        .profile-image {{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #3498db, #9b59b6);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3em;
+            font-weight: bold;
+        }}
         
         .projects-section {{
             grid-column: 1 / -1;
         }}
         
-                 .project-item {{
-             background: #f8f9fa;
-             border-radius: 12px;
-             padding: 20px;
-             margin-bottom: 20px;
-             border-left: 5px solid #3498db;
-             transition: transform 0.3s ease;
-         }}
-         
-         .project-item:hover {{
-             transform: translateX(5px);
-         }}
+        .project-item {{
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid #3498db;
+            transition: transform 0.3s ease;
+        }}
+        
+        .project-item:hover {{
+            transform: translateX(5px);
+        }}
         
         .project-header {{
             display: flex;
@@ -761,13 +760,13 @@ def generate_html(personal_info):
             margin: 0;
         }}
         
-                 .project-period {{
-             background: #3498db;
-             color: white;
-             padding: 5px 12px;
-             border-radius: 15px;
-             font-size: 0.9em;
-         }}
+        .project-period {{
+            background: #3498db;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }}
         
         .project-info {{
             display: flex;
@@ -776,14 +775,14 @@ def generate_html(personal_info):
             margin-bottom: 15px;
         }}
         
-                 .info-tag {{
-             background: #e8f4fd;
-             color: #2980b9;
-             padding: 4px 10px;
-             border-radius: 12px;
-             font-size: 0.85em;
-             border: 1px solid #b3d9f2;
-         }}
+        .info-tag {{
+            background: #e8f4fd;
+            color: #2980b9;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            border: 1px solid #b3d9f2;
+        }}
         
         .project-description h4 {{
             color: #2c3e50;
@@ -796,14 +795,14 @@ def generate_html(personal_info):
             padding-left: 0;
         }}
         
-                 .project-description li {{
-             background: white;
-             padding: 8px 12px;
-             margin-bottom: 8px;
-             border-radius: 6px;
-             border-left: 3px solid #3498db;
-             font-size: 0.95em;
-         }}
+        .project-description li {{
+            background: white;
+            padding: 8px 12px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            border-left: 3px solid #3498db;
+            font-size: 0.95em;
+        }}
         
         /* 技能样式 */
         .skills-container {{
@@ -828,21 +827,21 @@ def generate_html(personal_info):
             gap: 12px;
         }}
         
-                 .skill-item {{
-             display: flex;
-             justify-content: space-between;
-             align-items: center;
-             background: #f8f9fa;
-             padding: 12px 15px;
-             border-radius: 8px;
-             border-left: 4px solid #3498db;
-             transition: transform 0.2s ease;
-         }}
-         
-         .skill-item:hover {{
-             transform: translateX(5px);
-             background: #e8f4fd;
-         }}
+        .skill-item {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f8f9fa;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            transition: transform 0.2s ease;
+        }}
+        
+        .skill-item:hover {{
+            transform: translateX(5px);
+            background: #e8f4fd;
+        }}
         
         .skill-name {{
             font-weight: 500;
@@ -912,14 +911,14 @@ def generate_html(personal_info):
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }}
         
-                 .language-table th {{
-             background: #3498db;
-             color: white;
-             padding: 15px;
-             text-align: center;
-             font-weight: 600;
-             font-size: 1.1em;
-         }}
+        .language-table th {{
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1em;
+        }}
         
         .language-table td {{
             padding: 15px;
@@ -953,59 +952,59 @@ def generate_html(personal_info):
             min-width: 100px;
         }}
         
-                 .language-legend {{
-             background: #f8f9fa;
-             padding: 20px;
-             border-radius: 12px;
-             border: 2px solid #ecf0f1;
-         }}
-         
-         /* 教育背景样式 */
-         .education-container {{
-             grid-column: 1 / -1;
-         }}
-         
-         .education-item {{
-             background: #f8f9fa;
-             border-radius: 12px;
-             padding: 20px;
-             margin-bottom: 20px;
-             border-left: 5px solid #27ae60;
-             transition: transform 0.3s ease;
-         }}
-         
-         .education-item:hover {{
-             transform: translateX(5px);
-         }}
-         
-         .education-header {{
-             display: flex;
-             justify-content: space-between;
-             align-items: center;
-             margin-bottom: 15px;
-             flex-wrap: wrap;
-         }}
-         
-         .education-header h3 {{
-             color: #2c3e50;
-             font-size: 1.3em;
-             margin: 0;
-         }}
-         
-         .education-period {{
-             background: #27ae60;
-             color: white;
-             padding: 5px 12px;
-             border-radius: 15px;
-             font-size: 0.9em;
-         }}
-         
-         .education-info {{
-             display: flex;
-             flex-wrap: wrap;
-             gap: 10px;
-             margin-bottom: 15px;
-         }}
+        .language-legend {{
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid #ecf0f1;
+        }}
+        
+        /* 教育背景样式 */
+        .education-container {{
+            grid-column: 1 / -1;
+        }}
+        
+        .education-item {{
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid #27ae60;
+            transition: transform 0.3s ease;
+        }}
+        
+        .education-item:hover {{
+            transform: translateX(5px);
+        }}
+        
+        .education-header {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }}
+        
+        .education-header h3 {{
+            color: #2c3e50;
+            font-size: 1.3em;
+            margin: 0;
+        }}
+        
+        .education-period {{
+            background: #27ae60;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }}
+        
+        .education-info {{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }}
         
         @media (max-width: 768px) {{
             .content {{
@@ -1048,39 +1047,38 @@ def generate_html(personal_info):
             <div class="profile-image">{personal_info['name'][0] if personal_info['name'] else 'Y'}</div>
             <h1>{personal_info['name']}</h1>
             <p>技术者経歴書 - 个人简历与技能展示</p>
-            
         </div>
         
         <div class="content">
-                         <div class="section">
-                 <h2>基本信息</h2>
-                                   <div class="info-row">
-                      <div class="info-group">
-                          <div class="info-label">姓名</div>
-                          <div class="info-value">{personal_info['name']}</div>
-                      </div>
-                      <div class="info-group">
-                          <div class="info-label">职位</div>
-                          <div class="info-value">{personal_info['position']}</div>
-                      </div>
-                      <div class="info-group">
-                          <div class="info-label">联系方式</div>
-                          <div class="info-value">{personal_info['contact']}</div>
-                      </div>
-                  </div>
-                  
-                  <div class="info-row">
-                      {f"<div class='info-group'><div class='info-label'>出生年月</div><div class='info-value'>{personal_info['birth_date']}</div></div>" if personal_info['birth_date'] else ""}
-                      {f"<div class='info-group'><div class='info-label'>年龄</div><div class='info-value'>{personal_info['age']}岁</div></div>" if personal_info['age'] else ""}
-                      {f"<div class='info-group'><div class='info-label'>国籍</div><div class='info-value'>{personal_info['nationality']}</div></div>" if personal_info['nationality'] else ""}
-                  </div>
-                  
-                  <div class="info-row">
-                      {f"<div class='info-group'><div class='info-label'>在日年数</div><div class='info-value'>{personal_info['years_in_japan']}年</div></div>" if personal_info['years_in_japan'] else ""}
-                      {f"<div class='info-group'><div class='info-label'>実務年数</div><div class='info-value'>{personal_info['work_years']}年</div></div>" if personal_info['work_years'] else ""}
-                      {f"<div class='info-group'><div class='info-label'>最寄駅</div><div class='info-value'>{personal_info['nearest_station']}</div></div>" if personal_info['nearest_station'] else ""}
-                  </div>
-             </div>
+            <div class="section">
+                <h2>基本信息</h2>
+                <div class="info-row">
+                    <div class="info-group">
+                        <div class="info-label">姓名</div>
+                        <div class="info-value">{personal_info['name']}</div>
+                    </div>
+                    <div class="info-group">
+                        <div class="info-label">职位</div>
+                        <div class="info-value">{personal_info['position']}</div>
+                    </div>
+                    <div class="info-group">
+                        <div class="info-label">联系方式</div>
+                        <div class="info-value">{personal_info['contact']}</div>
+                    </div>
+                </div>
+                
+                <div class="info-row">
+                    {f"<div class='info-group'><div class='info-label'>出生年月</div><div class='info-value'>{personal_info['birth_date']}</div></div>" if personal_info['birth_date'] else ""}
+                    {f"<div class='info-group'><div class='info-label'>年龄</div><div class='info-value'>{personal_info['age']}岁</div></div>" if personal_info['age'] else ""}
+                    {f"<div class='info-group'><div class='info-label'>国籍</div><div class='info-value'>{personal_info['nationality']}</div></div>" if personal_info['nationality'] else ""}
+                </div>
+                
+                <div class="info-row">
+                    {f"<div class='info-group'><div class='info-label'>在日年数</div><div class='info-value'>{personal_info['years_in_japan']}年</div></div>" if personal_info['years_in_japan'] else ""}
+                    {f"<div class='info-group'><div class='info-label'>実務年数</div><div class='info-value'>{personal_info['work_years']}年</div></div>" if personal_info['work_years'] else ""}
+                    {f"<div class='info-group'><div class='info-label'>最寄駅</div><div class='info-value'>{personal_info['nearest_station']}</div></div>" if personal_info['nearest_station'] else ""}
+                </div>
+            </div>
             
             {f"""
             <div class="section education-container">
@@ -1100,7 +1098,7 @@ def generate_html(personal_info):
                 </div>
                 <div class="info-item">
                     <div class="info-label">持续学习</div>
-                    <div class="info-value">持续关注技术发展趋势,不断学习新技术</div>
+                    <div class="info-value">持续关注技术发展趋势, 不断学习新技术</div>
                 </div>
             </div>
             """}
@@ -1133,8 +1131,7 @@ def generate_html(personal_info):
         </div>
     </div>
 </body>
-</html>
-"""
+</html>"""
     return html_content
 
 def main():
