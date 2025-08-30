@@ -1,7 +1,13 @@
 name: Deploy Personal Tech Card
+
 on:
   push:
     branches: [main]  # 只在main分支更新时触发
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build-and-deploy:
