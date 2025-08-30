@@ -34,12 +34,6 @@ def extract_personal_info(data):
             'chinese': {'reading': '', 'writing': '', 'conversation': ''},
             'other': {'reading': '', 'writing': '', 'conversation': ''}
         },
-        'language_ability': {
-            'japanese': {'reading': '', 'writing': '', 'conversation': ''},
-            'english': {'reading': '', 'writing': '', 'conversation': ''},
-            'chinese': {'reading': '', 'writing': '', 'conversation': ''},
-            'other': {'reading': '', 'writing': '', 'conversation': ''}
-        },
         'experience': '丰富的技术项目开发经验, 涵盖前端、后端和全栈开发',
         'education': [],
         'learning': '持续关注技术发展趋势, 不断学习新技术',
