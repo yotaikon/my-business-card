@@ -1,6 +1,7 @@
 # 个人技术简历生成器
 
 一个基于Python的自动化简历生成工具，可以从Excel文件中读取个人信息并生成美观的HTML简历页面。
+个⼈主⻚了：https://yotaikon.github.io/my-business-card/
 
 ## 🌟 功能特性
 
