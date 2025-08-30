@@ -40,9 +40,9 @@ def extract_personal_info(data):
             'chinese': {'reading': '', 'writing': '', 'conversation': ''},
             'other': {'reading': '', 'writing': '', 'conversation': ''}
         },
-        'experience': '丰富的技术项目开发经验，涵盖前端、后端和全栈开发',
+        'experience': '丰富的技术项目开发经验, 涵盖前端、后端和全栈开发',
         'education': [],
-        'learning': '持续关注技术发展趋势，不断学习新技术',
+        'learning': '持续关注技术发展趋势, 不断学习新技术',
         'age': '',
         'nationality': '',
         'years_in_japan': '',
@@ -1106,7 +1106,7 @@ def generate_html(personal_info):
                 </div>
                 <div class="info-item">
                     <div class="info-label">持续学习</div>
-                    <div class="info-value">持续关注技术发展趋势，不断学习新技术</div>
+                    <div class="info-value">持续关注技术发展趋势, 不断学习新技术</div>
                 </div>
             </div>
             """}
@@ -1149,7 +1149,7 @@ def main():
     
     # 检查Excel文件是否存在
     if not os.path.exists(excel_file):
-        print(f"警告: 找不到文件 {excel_file}，将使用默认数据")
+        print(f"警告: 找不到文件 {excel_file}, 将使用默认数据")
         data = None
     else:
         # 读取Excel数据
