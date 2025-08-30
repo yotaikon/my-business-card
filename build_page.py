@@ -6,7 +6,7 @@ import re
 def read_excel_data(file_path):
     """读取Excel文件中的数据"""
     try:
-        # 尝试读取Excel文件，跳过前几行以获取更好的数据
+        # 尝试读取Excel文件, 跳过前几行以获取更好的数据
         df = pd.read_excel(file_path, header=None)
         return df
     except Exception as e:
