@@ -50,13 +50,6 @@
             display: block;
         }
         
-        .basic-info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 25px;
-            margin-bottom: 30px;
-        }
-        
         .section {
             background: rgba(255, 255, 255, 0.98);
             border-radius: 20px;
@@ -250,7 +243,6 @@
             font-size: 0.95em;
         }
         
-        /* 技能样式 */
         .skills-container {
             grid-column: 1 / -1;
         }
@@ -304,41 +296,6 @@
             text-align: center;
         }
         
-        .skills-legend {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 12px;
-            margin-top: 30px;
-            border: 2px solid #ecf0f1;
-        }
-        
-        .skills-legend h4 {
-            color: #2c3e50;
-            margin-bottom: 15px;
-            font-size: 1.1em;
-        }
-        
-        .legend-items {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        
-        .legend-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.9em;
-            color: #555;
-        }
-        
-        .legend-color {
-            width: 16px;
-            height: 16px;
-            border-radius: 4px;
-        }
-        
-        /* 语言能力样式 */
         .language-container {
             grid-column: 1 / -1;
         }
@@ -398,14 +355,6 @@
             min-width: 100px;
         }
         
-        .language-legend {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 12px;
-            border: 2px solid #ecf0f1;
-        }
-        
-        /* 教育背景样式 */
         .education-container {
             grid-column: 1 / -1;
         }
@@ -471,11 +420,6 @@
                 grid-template-columns: 1fr;
             }
             
-            .legend-items {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
             .language-table {
                 font-size: 0.9em;
             }
@@ -496,461 +440,453 @@
         </div>
         
         <div class="content">
-            <div class="section">
-                <h2>基本信息</h2>
-                <div class="info-row">
-                    <div class="info-group">
-                        <div class="info-label">姓名</div>
-                        <div class="info-value">Y.TK</div>
-                    </div>
-                    <div class="info-group">
-                        <div class="info-label">职位</div>
-                        <div class="info-value">技术工程师</div>
-                    </div>
-                    <div class="info-group">
-                        <div class="info-label">联系方式</div>
-                        <div class="info-value">请通过邮箱联系</div>
-                    </div>
+            
+        <div class="section">
+            <h2>基本信息</h2>
+            <div class="info-row">
+                <div class="info-group">
+                    <div class="info-label">姓名</div>
+                    <div class="info-value">Y.TK</div>
                 </div>
-                
-                <div class="info-row">
-                    <div class='info-group'><div class='info-label'>出生年月</div><div class='info-value'>1990年4月</div></div>
-                    <div class='info-group'><div class='info-label'>年龄</div><div class='info-value'>35岁</div></div>
-                    <div class='info-group'><div class='info-label'>国籍</div><div class='info-value'>中国</div></div>
+                <div class="info-group">
+                    <div class="info-label">职位</div>
+                    <div class="info-value">技术工程师</div>
                 </div>
-                
-                <div class="info-row">
-                    <div class='info-group'><div class='info-label'>在日年数</div><div class='info-value'>1年</div></div>
-                    <div class='info-group'><div class='info-label'>実務年数</div><div class='info-value'>7年</div></div>
-                    <div class='info-group'><div class='info-label'>最寄駅</div><div class='info-value'>京浜東北線 西川口駅</div></div>
+                <div class="info-group">
+                    <div class="info-label">联系方式</div>
+                    <div class="info-value">请通过邮箱联系</div>
                 </div>
             </div>
-            
-            
-            <div class="section education-container">
-                <h2>教育背景</h2>
-                
-        <div class="education-container">
-            
-            <div class="education-item">
-                <div class="education-header">
-                    <h3>江南大学</h3>
-                    <span class="education-period">2007年9月 ~ 2011年7月</span>
+    
+            <div class="info-row">
+                <div class="info-group">
+                    <div class="info-label">出生年月</div>
+                    <div class="info-value">1990年4月</div>
                 </div>
-                <div class="education-details">
-                    <div class="education-info">
-                        <span class="info-tag">专业: 機械工学及自動化学科</span>
-                        <span class="info-tag">学位: 学士</span>
-                    </div>
+        
+                <div class="info-group">
+                    <div class="info-label">年龄</div>
+                    <div class="info-value">35岁</div>
                 </div>
+        
+                <div class="info-group">
+                    <div class="info-label">国籍</div>
+                    <div class="info-value">中国</div>
+                </div>
+        
             </div>
         
-            <div class="education-item">
-                <div class="education-header">
-                    <h3>上海海事大学</h3>
-                    <span class="education-period">2012年9月 ~ 2015年10月</span>
+            <div class="info-row">
+        
+                <div class="info-group">
+                    <div class="info-label">在日年数</div>
+                    <div class="info-value">1年</div>
                 </div>
-                <div class="education-details">
-                    <div class="education-info">
-                        <span class="info-tag">专业: 技術経済管理学科</span>
-                        <span class="info-tag">学位: 修士</span>
-                    </div>
+            
+                <div class="info-group">
+                    <div class="info-label">実務年数</div>
+                    <div class="info-value">7年</div>
                 </div>
+            
+                <div class="info-group">
+                    <div class="info-label">最寄駅</div>
+                    <div class="info-value">京浜東北線 西川口駅</div>
+                </div>
+            
             </div>
         
         </div>
     
+            <div class="section education-container">
+                <h2>教育背景</h2>
+                <div class="education-container">
+                    
+                <div class="education-item">
+                    <div class="education-header">
+                        <h3>江南大学</h3>
+                        <span class="education-period">2007年9月 ~ 2011年7月</span>
+                    </div>
+                    <div class="education-details">
+                        <div class="education-info">
+                            <span class="info-tag">专业: 機械工学及自動化学科</span>
+                            <span class="info-tag">学位: 学士</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="education-item">
+                    <div class="education-header">
+                        <h3>上海海事大学</h3>
+                        <span class="education-period">2012年9月 ~ 2015年10月</span>
+                    </div>
+                    <div class="education-details">
+                        <div class="education-info">
+                            <span class="info-tag">专业: 技術経済管理学科</span>
+                            <span class="info-tag">学位: 修士</span>
+                        </div>
+                    </div>
+                </div>
+            
+                </div>
                 <div class="info-item" style="margin-top: 20px;">
                     <div class="info-label">持续学习</div>
                     <div class="info-value">持续关注技术发展趋势, 不断学习新技术</div>
                 </div>
             </div>
-            
-            
-            
+        
             <div class="section language-container">
                 <h2>语言能力</h2>
+                <div class="language-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>语言</th>
+                                <th>阅读</th>
+                                <th>写作</th>
+                                <th>会话</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                    <tr>
+                        <td class="language-name">
+                            <span class="language-flag">🇨🇳</span>
+                            中文
+                        </td>
+                        <td class="language-skill">
+                            <span class="skill-level" style="background-color: #3498db">
+                                A (商务级)
+                            </span>
+                        </td>
+                        <td class="language-skill">
+                            <span class="skill-level" style="background-color: #3498db">
+                                A (商务级)
+                            </span>
+                        </td>
+                        <td class="language-skill">
+                            <span class="skill-level" style="background-color: #f39c12">
+                                A (业务可用)
+                            </span>
+                        </td>
+                    </tr>
                 
-        <div class="language-container">
-            <div class="language-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>语言</th>
-                            <th>阅读</th>
-                            <th>写作</th>
-                            <th>会话</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                <tr>
-                    <td class="language-name">
-                        <span class="language-flag">🇨🇳</span>
-                        中文
-                    </td>
-                    <td class="language-skill">
-                        <span class="skill-level" style="background-color: #27ae60">
-                            A (母语级)
-                        </span>
-                    </td>
-                    <td class="language-skill">
-                        <span class="skill-level" style="background-color: #27ae60">
-                            A (母语级)
-                        </span>
-                    </td>
-                    <td class="language-skill">
-                        <span class="skill-level" style="background-color: #27ae60">
-                            A (母语级)
-                        </span>
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td class="language-name">
-                        <span class="language-flag">🇯🇵</span>
-                        日本語
-                    </td>
-                    <td class="language-skill">
-                        <span class="skill-level" style="background-color: #3498db">
-                            B (商务级)
-                        </span>
-                    </td>
-                    <td class="language-skill">
-                        <span class="skill-level" style="background-color: #3498db">
-                            B (商务级)
-                        </span>
-                    </td>
-                    <td class="language-skill">
-                        <span class="skill-level" style="background-color: #f39c12">
-                            C (业务可用)
-                        </span>
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td class="language-name">
-                        <span class="language-flag">🇺🇸</span>
-                        English
-                    </td>
-                    <td class="language-skill">
-                        <span class="skill-level" style="background-color: #3498db">
-                            B (商务级)
-                        </span>
-                    </td>
-                    <td class="language-skill">
-                        <span class="skill-level" style="background-color: #3498db">
-                            B (商务级)
-                        </span>
-                    </td>
-                    <td class="language-skill">
-                        <span class="skill-level" style="background-color: #f39c12">
-                            C (业务可用)
-                        </span>
-                    </td>
-                </tr>
-            
-                    </tbody>
-                </table>
-            </div>
-            
-            <div class="language-legend">
-                <h4>语言等级说明:</h4>
-                <div class="legend-items">
-                    <span class="legend-item"><span class="legend-color" style="background-color: #27ae60"></span>A - 母语级</span>
-                    <span class="legend-item"><span class="legend-color" style="background-color: #3498db"></span>B - 商务级</span>
-                    <span class="legend-item"><span class="legend-color" style="background-color: #f39c12"></span>C - 业务可用</span>
-                    <span class="legend-item"><span class="legend-color" style="background-color: #e74c3c"></span>D - 稍有困难</span>
+                    <tr>
+                        <td class="language-name">
+                            <span class="language-flag">🇯🇵</span>
+                            日本語
+                        </td>
+                        <td class="language-skill">
+                            <span class="skill-level" style="background-color: #3498db">
+                                B (商务级)
+                            </span>
+                        </td>
+                        <td class="language-skill">
+                            <span class="skill-level" style="background-color: #3498db">
+                                B (商务级)
+                            </span>
+                        </td>
+                        <td class="language-skill">
+                            <span class="skill-level" style="background-color: #f39c12">
+                                C (业务可用)
+                            </span>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="language-name">
+                            <span class="language-flag">🇺🇸</span>
+                            English
+                        </td>
+                        <td class="language-skill">
+                            <span class="skill-level" style="background-color: #3498db">
+                                B (商务级)
+                            </span>
+                        </td>
+                        <td class="language-skill">
+                            <span class="skill-level" style="background-color: #3498db">
+                                B (商务级)
+                            </span>
+                        </td>
+                        <td class="language-skill">
+                            <span class="skill-level" style="background-color: #f39c12">
+                                C (业务可用)
+                            </span>
+                        </td>
+                    </tr>
+                
+                        </tbody>
+                    </table>
                 </div>
             </div>
-        </div>
-    
-            </div>
-            
-            
-            
+        
             <div class="section skills-container">
                 <h2>专业技能矩阵</h2>
                 
-        <div class="skills-container">
-            <div class="skills-section">
-                <h3>操作系统 (OS)</h3>
-                <div class="skills-grid">
-                    
-                <div class="skill-item">
-                    <span class="skill-name">Windows</span>
-                    <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
-                </div>
-            
-                <div class="skill-item">
-                    <span class="skill-name">Linux</span>
-                    <span class="skill-level" style="background-color: #f39c12">C (有经验)</span>
-                </div>
-            
-                <div class="skill-item">
-                    <span class="skill-name">Mac OS</span>
-                    <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
-                </div>
-            
-                </div>
+                    <div class="skills-section">
+                        <h3>操作系统 (OS)</h3>
+                        <div class="skills-grid">
+                
+                            <div class="skill-item">
+                                <span class="skill-name">Windows</span>
+                                <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
+                            </div>
+                        
+                            <div class="skill-item">
+                                <span class="skill-name">Linux</span>
+                                <span class="skill-level" style="background-color: #f39c12">C (有经验)</span>
+                            </div>
+                        
+                            <div class="skill-item">
+                                <span class="skill-name">Mac OS</span>
+                                <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
+                            </div>
+                        
+                        </div>
+                    </div>
+                
+                    <div class="skills-section">
+                        <h3>数据库 (Database)</h3>
+                        <div class="skills-grid">
+                
+                            <div class="skill-item">
+                                <span class="skill-name">Oracle</span>
+                                <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
+                            </div>
+                        
+                            <div class="skill-item">
+                                <span class="skill-name">SQL Server</span>
+                                <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
+                            </div>
+                        
+                            <div class="skill-item">
+                                <span class="skill-name">MySQL</span>
+                                <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
+                            </div>
+                        
+                            <div class="skill-item">
+                                <span class="skill-name">Access</span>
+                                <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
+                            </div>
+                        
+                            <div class="skill-item">
+                                <span class="skill-name">GitHub</span>
+                                <span class="skill-level" style="background-color: #3498db">B (可实践)</span>
+                            </div>
+                        
+                        </div>
+                    </div>
+                
+                    <div class="skills-section">
+                        <h3>开发工具 (Tools)</h3>
+                        <div class="skills-grid">
+                
+                            <div class="skill-item">
+                                <span class="skill-name">Eclipse</span>
+                                <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
+                            </div>
+                        
+                            <div class="skill-item">
+                                <span class="skill-name">Visual Studio</span>
+                                <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
+                            </div>
+                        
+                            <div class="skill-item">
+                                <span class="skill-name">IntelliJ IDEA</span>
+                                <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
+                            </div>
+                        
+                            <div class="skill-item">
+                                <span class="skill-name">Photoshop</span>
+                                <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
+                            </div>
+                        
+                            <div class="skill-item">
+                                <span class="skill-name">Cursor</span>
+                                <span class="skill-level" style="background-color: #3498db">B (可实践)</span>
+                            </div>
+                        
+                        </div>
+                    </div>
+                
+                    <div class="skills-section">
+                        <h3>编程语言 (Languages)</h3>
+                        <div class="skills-grid">
+                
+                            <div class="skill-item">
+                                <span class="skill-name">C</span>
+                                <span class="skill-level" style="background-color: #e74c3c">D (基础知识)</span>
+                            </div>
+                        
+                            <div class="skill-item">
+                                <span class="skill-name">C++</span>
+                                <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
+                            </div>
+                        
+                            <div class="skill-item">
+                                <span class="skill-name">C#</span>
+                                <span class="skill-level" style="background-color: #f39c12">C (有经验)</span>
+                            </div>
+                        
+                            <div class="skill-item">
+                                <span class="skill-name">VB</span>
+                                <span class="skill-level" style="background-color: #3498db">B (可实践)</span>
+                            </div>
+                        
+                            <div class="skill-item">
+                                <span class="skill-name">VBA</span>
+                                <span class="skill-level" style="background-color: #3498db">B (可实践)</span>
+                            </div>
+                        
+                            <div class="skill-item">
+                                <span class="skill-name">Shell</span>
+                                <span class="skill-level" style="background-color: #f39c12">C (有经验)</span>
+                            </div>
+                        
+                            <div class="skill-item">
+                                <span class="skill-name">Java</span>
+                                <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
+                            </div>
+                        
+                            <div class="skill-item">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
+                            </div>
+                        
+                            <div class="skill-item">
+                                <span class="skill-name">JSP/HTML</span>
+                                <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
+                            </div>
+                        
+                            <div class="skill-item">
+                                <span class="skill-name">.NET (C#,ASP)</span>
+                                <span class="skill-level" style="background-color: #3498db">B (可实践)</span>
+                            </div>
+                        
+                            <div class="skill-item">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-level" style="background-color: #3498db">B (可实践)</span>
+                            </div>
+                        
+                        </div>
+                    </div>
+                
             </div>
-            
-            <div class="skills-section">
-                <h3>数据库 (Database)</h3>
-                <div class="skills-grid">
-                    
-                <div class="skill-item">
-                    <span class="skill-name">Oracle</span>
-                    <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
-                </div>
-            
-                <div class="skill-item">
-                    <span class="skill-name">SQL Server</span>
-                    <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
-                </div>
-            
-                <div class="skill-item">
-                    <span class="skill-name">MySQL</span>
-                    <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
-                </div>
-            
-                <div class="skill-item">
-                    <span class="skill-name">Access</span>
-                    <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
-                </div>
-            
-                <div class="skill-item">
-                    <span class="skill-name">GitHub</span>
-                    <span class="skill-level" style="background-color: #3498db">B (可实践)</span>
-                </div>
-            
-                </div>
-            </div>
-            
-            <div class="skills-section">
-                <h3>开发工具 (Tools)</h3>
-                <div class="skills-grid">
-                    
-                <div class="skill-item">
-                    <span class="skill-name">Eclipse</span>
-                    <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
-                </div>
-            
-                <div class="skill-item">
-                    <span class="skill-name">Visual Studio</span>
-                    <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
-                </div>
-            
-                <div class="skill-item">
-                    <span class="skill-name">IntelliJ IDEA</span>
-                    <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
-                </div>
-            
-                <div class="skill-item">
-                    <span class="skill-name">Photoshop</span>
-                    <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
-                </div>
-            
-                <div class="skill-item">
-                    <span class="skill-name">Cursor</span>
-                    <span class="skill-level" style="background-color: #3498db">B (可实践)</span>
-                </div>
-            
-                </div>
-            </div>
-            
-            <div class="skills-section">
-                <h3>编程语言 (Languages)</h3>
-                <div class="skills-grid">
-                    
-                <div class="skill-item">
-                    <span class="skill-name">C</span>
-                    <span class="skill-level" style="background-color: #e74c3c">D (基础知识)</span>
-                </div>
-            
-                <div class="skill-item">
-                    <span class="skill-name">C++</span>
-                    <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
-                </div>
-            
-                <div class="skill-item">
-                    <span class="skill-name">C#</span>
-                    <span class="skill-level" style="background-color: #f39c12">C (有经验)</span>
-                </div>
-            
-                <div class="skill-item">
-                    <span class="skill-name">VB</span>
-                    <span class="skill-level" style="background-color: #3498db">B (可实践)</span>
-                </div>
-            
-                <div class="skill-item">
-                    <span class="skill-name">VBA</span>
-                    <span class="skill-level" style="background-color: #3498db">B (可实践)</span>
-                </div>
-            
-                <div class="skill-item">
-                    <span class="skill-name">Shell</span>
-                    <span class="skill-level" style="background-color: #f39c12">C (有经验)</span>
-                </div>
-            
-                <div class="skill-item">
-                    <span class="skill-name">Java</span>
-                    <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
-                </div>
-            
-                <div class="skill-item">
-                    <span class="skill-name">JavaScript</span>
-                    <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
-                </div>
-            
-                <div class="skill-item">
-                    <span class="skill-name">JSP/HTML</span>
-                    <span class="skill-level" style="background-color: #27ae60">A (熟练)</span>
-                </div>
-            
-                <div class="skill-item">
-                    <span class="skill-name">.NET (C#,ASP)</span>
-                    <span class="skill-level" style="background-color: #3498db">B (可实践)</span>
-                </div>
-            
-                <div class="skill-item">
-                    <span class="skill-name">Python</span>
-                    <span class="skill-level" style="background-color: #3498db">B (可实践)</span>
-                </div>
-            
-                </div>
-            </div>
-            
-            <div class="skills-legend">
-                <h4>技能等级说明:</h4>
-                <div class="legend-items">
-                    <span class="legend-item"><span class="legend-color" style="background-color: #27ae60"></span>A - 熟练</span>
-                    <span class="legend-item"><span class="legend-color" style="background-color: #3498db"></span>B - 可实践</span>
-                    <span class="legend-item"><span class="legend-color" style="background-color: #f39c12"></span>C - 有经验</span>
-                    <span class="legend-item"><span class="legend-color" style="background-color: #e74c3c"></span>D - 基础知识</span>
-                </div>
-            </div>
-        </div>
-    
-            </div>
-            
-            
-            
+        
             <div class="section projects-section">
                 <h2>项目经历 (5个项目)</h2>
                 
-            <div class="project-item">
-                <div class="project-header">
-                    <h3>人材サイトシステム開発</h3>
-                    <span class="project-period">2018/06 ~ 2019/12 (19ヶ月)</span>
-                </div>
-                <div class="project-details">
-                    <div class="project-info">
-                        <span class="info-tag">团队: 日本 22人</span>
-                        <span class="info-tag">技术: Windows, Oracle</span>
-                        <span class="info-tag">语言: Java</span>
-                        <span class="info-tag">角色: SE (Software Engineer)</span>
+                <div class="project-item">
+                    <div class="project-header">
+                        <h3>人材サイトシステム開発</h3>
+                        <span class="project-period">2018/06 ~ 2019/12 (19ヶ月)</span>
                     </div>
-                    <div class="project-description">
-                        <h4>主要职责:</h4>
-                        <ul>
-                            <li>職種分類・スキル管理・採用モジュール等の実装</li><li>仕様書に基づく単体/結合テスト実施</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="project-item">
-                <div class="project-header">
-                    <h3>Speedoor旅行サイト開発プロジェクト</h3>
-                    <span class="project-period">2020/01 ~ 2021/05 (17ヶ月)</span>
-                </div>
-                <div class="project-details">
-                    <div class="project-info">
-                        <span class="info-tag">团队: 中国 15人</span>
-                        <span class="info-tag">技术: Windows, Oracle</span>
-                        <span class="info-tag">语言: Java</span>
-                        <span class="info-tag">角色: SE (Software Engineer)</span>
-                    </div>
-                    <div class="project-description">
-                        <h4>主要职责:</h4>
-                        <ul>
-                            <li>ホテル/ツアー予約システムのフロントエンド実装</li><li>マルチデバイス対応静的ページの開発</li><li>JSONデータ連携による動的コンテンツ表示</li>
-                        </ul>
+                    <div class="project-details">
+                        <div class="project-info">
+                            <span class="info-tag">团队: 日本 22人</span>
+                            <span class="info-tag">技术: Windows, Oracle</span>
+                            <span class="info-tag">语言: Java</span>
+                            <span class="info-tag">角色: SE (Software Engineer)</span>
+                        </div>
+                        <div class="project-description">
+                            <h4>主要职责:</h4>
+                            <ul>
+                                <li>職種分類・スキル管理・採用モジュール等の実装</li><li>仕様書に基づく単体/結合テスト実施</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        
-            <div class="project-item">
-                <div class="project-header">
-                    <h3>某行政システム開発プロジェクト</h3>
-                    <span class="project-period">2021/06 ~ 2023/06 (25ヶ月)</span>
-                </div>
-                <div class="project-details">
-                    <div class="project-info">
-                        <span class="info-tag">团队: 中国 15人</span>
-                        <span class="info-tag">技术: Windows, Oracle</span>
-                        <span class="info-tag">语言: Java</span>
-                        <span class="info-tag">角色: SE (Software Engineer)</span>
-                    </div>
-                    <div class="project-description">
-                        <h4>主要职责:</h4>
-                        <ul>
-                            <li>税務管理モジュールのフルスタック開発</li><li>データ収集→Excel出力パイプライン構築</li><li>React + Spring BootによるCRUD画面実装</li><li>VBAマクロでの帳票自動作成機能開発</li><li>設計書類（基本/詳細/単体仕様書）作成</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="project-item">
-                <div class="project-header">
-                    <h3>重慶鉄鋼L2システム概要</h3>
-                    <span class="project-period">2023/07 ~ 2024/05 (11ヶ月)</span>
-                </div>
-                <div class="project-details">
-                    <div class="project-info">
-                        <span class="info-tag">团队: 中国 15人</span>
-                        <span class="info-tag">技术: Windows, MySQL</span>
-                        <span class="info-tag">语言: C++</span>
-                        <span class="info-tag">角色: PM (Project Manager)</span>
-                    </div>
-                    <div class="project-description">
-                        <h4>主要职责:</h4>
-                        <ul>
-                            <li>生産ラインから実績データを自動収集 →L3へ送信</li><li>電文形式設定/自動送信機能</li><li>日次レポートの自動作成・差異チェック</li><li>タスクトリガーによる電文処理(手動/自動)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="project-item">
-                <div class="project-header">
-                    <h3>ファーウェイ・スマートドアロック開発</h3>
-                    <span class="project-period">2024/08 ~ 2025/07 (12ヶ月)</span>
-                </div>
-                <div class="project-details">
-                    <div class="project-info">
-                        <span class="info-tag">团队: 中国 15人</span>
-                        <span class="info-tag">技术: Linux, Oracle</span>
-                        <span class="info-tag">语言: C++</span>
-                        <span class="info-tag">角色: SE (Software Engineer)</span>
-                    </div>
-                    <div class="project-description">
-                        <h4>主要职责:</h4>
-                        <ul>
-                            <li>マルチメディア関連モジュール (media/audio/utils) のコード管理</li><li>緊急障害対応&他部署インターフェース調整</li><li>週次進捗会議での技術報告</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        
-            </div>
             
+                <div class="project-item">
+                    <div class="project-header">
+                        <h3>Speedoor旅行サイト開発プロジェクト</h3>
+                        <span class="project-period">2020/01 ~ 2021/05 (17ヶ月)</span>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-info">
+                            <span class="info-tag">团队: 中国 15人</span>
+                            <span class="info-tag">技术: Windows, Oracle</span>
+                            <span class="info-tag">语言: Java</span>
+                            <span class="info-tag">角色: SE (Software Engineer)</span>
+                        </div>
+                        <div class="project-description">
+                            <h4>主要职责:</h4>
+                            <ul>
+                                <li>ホテル/ツアー予約システムのフロントエンド実装</li><li>マルチデバイス対応静的ページの開発</li><li>JSONデータ連携による動的コンテンツ表示</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-item">
+                    <div class="project-header">
+                        <h3>某行政システム開発プロジェクト</h3>
+                        <span class="project-period">2021/06 ~ 2023/06 (25ヶ月)</span>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-info">
+                            <span class="info-tag">团队: 中国 15人</span>
+                            <span class="info-tag">技术: Windows, Oracle</span>
+                            <span class="info-tag">语言: Java</span>
+                            <span class="info-tag">角色: SE (Software Engineer)</span>
+                        </div>
+                        <div class="project-description">
+                            <h4>主要职责:</h4>
+                            <ul>
+                                <li>税務管理モジュールのフルスタック開発</li><li>データ収集→Excel出力パイプライン構築</li><li>React + Spring BootによるCRUD画面実装</li><li>VBAマクロでの帳票自動作成機能開発</li><li>設計書類（基本/詳細/単体仕様書）作成</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-item">
+                    <div class="project-header">
+                        <h3>重慶鉄鋼L2システム概要</h3>
+                        <span class="project-period">2023/07 ~ 2024/05 (11ヶ月)</span>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-info">
+                            <span class="info-tag">团队: 中国 15人</span>
+                            <span class="info-tag">技术: Windows, MySQL</span>
+                            <span class="info-tag">语言: C++</span>
+                            <span class="info-tag">角色: PM (Project Manager)</span>
+                        </div>
+                        <div class="project-description">
+                            <h4>主要职责:</h4>
+                            <ul>
+                                <li>生産ラインから実績データを自動収集 →L3へ送信</li><li>電文形式設定/自動送信機能</li><li>日次レポートの自動作成・差異チェック</li><li>タスクトリガーによる電文処理(手動/自動)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-item">
+                    <div class="project-header">
+                        <h3>ファーウェイ・スマートドアロック開発</h3>
+                        <span class="project-period">2024/08 ~ 2025/07 (12ヶ月)</span>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-info">
+                            <span class="info-tag">团队: 中国 15人</span>
+                            <span class="info-tag">技术: Linux, Oracle</span>
+                            <span class="info-tag">语言: C++</span>
+                            <span class="info-tag">角色: SE (Software Engineer)</span>
+                        </div>
+                        <div class="project-description">
+                            <h4>主要职责:</h4>
+                            <ul>
+                                <li>マルチメディア関連モジュール (media/audio/utils) のコード管理</li><li>緊急障害対応&他部署インターフェース調整</li><li>週次進捗会議での技術報告</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        
         </div>
         
         <div class="footer">
             <p>© 2024 技术者経歴書 - 由Python自动生成</p>
-            <p>生成时间: 2025-08-31 02:21:13</p>
+            <p>生成时间: 2025-08-31 02:46:08</p>
         </div>
     </div>
 </body>
