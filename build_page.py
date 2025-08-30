@@ -1106,7 +1106,7 @@ def generate_html(personal_info):
                 </div>
                 <div class="info-item">
                     <div class="info-label">持续学习</div>
-                    <div class="info-value">持续关注技术发展趋势, 不断学习新技术</div>
+                    <div class="info-value">持续关注技术发展趋势,不断学习新技术</div>
                 </div>
             </div>
             """}
