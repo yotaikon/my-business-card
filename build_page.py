@@ -1,12 +1,9 @@
 import pandas as pd
 import os
 from datetime import datetime
-import re
 
 def read_excel_data(file_path):
-    """读取Excel文件中的数据"""
     try:
-        # 尝试读取Excel文件, 跳过前几行以获取更好的数据
         df = pd.read_excel(file_path, header=None)
         return df
     except Exception as e:
@@ -14,42 +11,32 @@ def read_excel_data(file_path):
         return None
 
 def extract_personal_info(data):
-    """从Excel数据中提取个人信息"""
     personal_info = {
         'name': 'Y.TK',
-        'furigana': '',
         'position': '技术工程师',
         'contact': '请通过邮箱联系',
         'birth_date': '1990年4月',
         'nearest_station': '京浜東北線 西川口駅',
-        'skills': {
-            'os': {},
-            'database': {},
-            'tools': {},
-            'languages': {}
-        },
+        'age': '',
+        'nationality': '',
+        'years_in_japan': '',
+        'work_years': '',
+        'learning': '持续关注技术发展趋势, 不断学习新技术',
+        'skills': {'os': {}, 'database': {}, 'tools': {}, 'languages': {}},
         'language_ability': {
             'japanese': {'reading': '', 'writing': '', 'conversation': ''},
             'english': {'reading': '', 'writing': '', 'conversation': ''},
             'chinese': {'reading': '', 'writing': '', 'conversation': ''},
             'other': {'reading': '', 'writing': '', 'conversation': ''}
         },
-        'experience': '丰富的技术项目开发经验, 涵盖前端、后端和全栈开发',
         'education': [],
-        'learning': '持续关注技术发展趋势, 不断学习新技术',
-        'age': '',
-        'nationality': '',
-        'years_in_japan': '',
-        'work_years': '',
         'projects': []
     }
     
     if data is not None:
         try:
-            # 根据表格数据设置基本信息
             print("正在提取基本信息...")
             
-            # 根据表格数据设置个人信息
             personal_info['name'] = 'Y.TK'
             personal_info['age'] = '35'
             personal_info['nationality'] = '中国'
@@ -68,10 +55,8 @@ def extract_personal_info(data):
             
             print("基本信息提取完成")
             
-            # 提取语言能力信息
             print("正在提取语言能力信息...")
             
-            # 根据表格数据设置语言能力
             personal_info['language_ability'] = {
                 'japanese': {'reading': 'B', 'writing': 'B', 'conversation': 'C'},
                 'english': {'reading': 'B', 'writing': 'B', 'conversation': 'C'},
@@ -81,10 +66,8 @@ def extract_personal_info(data):
             
             print("语言能力信息提取完成")
             
-            # 提取教育背景信息
             print("正在提取教育背景信息...")
             
-            # 根据表格数据设置教育经历
             education_history = [
                 {
                     'period': '2007年9月 ~ 2011年7月',
@@ -103,80 +86,40 @@ def extract_personal_info(data):
             
             print("教育背景信息提取完成")
             
-            # 提取详细技能信息
             print("正在提取技能信息...")
             
-            # 操作系统技能
             os_skills = {
-                'Windows': 'A',
-                'UNIX': '',
-                'Linux': 'C',
-                'Solaris': '',
-                'BSD': '',
-                'AIX': '',
-                'HP-UX': '',
-                'MVS': '',
-                'Mac OS': 'A'
+                'Windows': 'A', 'UNIX': '', 'Linux': 'C', 'Solaris': '',
+                'BSD': '', 'AIX': '', 'HP-UX': '', 'MVS': '', 'Mac OS': 'A'
             }
             personal_info['skills']['os'] = os_skills
             
-            # 数据库技能
             db_skills = {
-                'Oracle': 'A',
-                'SQL Server': 'A',
-                'MySQL': 'A',
-                'Access': 'A',
-                'DB2': '',
-                'HiRDB': '',
-                'Sybase': '',
-                'DIVA': '',
-                'GitHub': 'B'
+                'Oracle': 'A', 'SQL Server': 'A', 'MySQL': 'A', 'Access': 'A',
+                'DB2': '', 'HiRDB': '', 'Sybase': '', 'DIVA': '', 'GitHub': 'B'
             }
             personal_info['skills']['database'] = db_skills
             
-            # 工具技能
             tools_skills = {
-                'Eclipse': 'A',
-                'Visual Studio': 'A',
-                'IntelliJ IDEA': 'A',
-                'SAPGUI': '',
-                'Axure RP': '',
-                'Figma': '',
-                'Photoshop': 'A',
-                'Cursor': 'B',
-                'Visio': ''
+                'Eclipse': 'A', 'Visual Studio': 'A', 'IntelliJ IDEA': 'A',
+                'SAPGUI': '', 'Axure RP': '', 'Figma': '', 'Photoshop': 'A',
+                'Cursor': 'B', 'Visio': ''
             }
             personal_info['skills']['tools'] = tools_skills
             
-            # 编程语言技能
             lang_skills = {
-                'C': 'D',
-                'C++': 'A',
-                'C#': 'C',
-                'ASP': '',
-                'VB': 'B',
-                'VBA': 'B',
-                'PHP': '',
-                'VBScript': '',
-                'Shell': 'C',
-                'Java': 'A',
-                'JavaScript': 'A',
-                'JSP/HTML': 'A',
-                'Perl': '',
-                '.NET (C#,ASP)': 'B',
-                'JavaServlet': '',
-                'Python': 'B',
-                'PL/SQL': '',
-                'ABAP': ''
+                'C': 'D', 'C++': 'A', 'C#': 'C', 'ASP': '', 'VB': 'B',
+                'VBA': 'B', 'PHP': '', 'VBScript': '', 'Shell': 'C',
+                'Java': 'A', 'JavaScript': 'A', 'JSP/HTML': 'A', 'Perl': '',
+                '.NET (C#,ASP)': 'B', 'JavaServlet': '', 'Python': 'B',
+                'PL/SQL': '', 'ABAP': ''
             }
             personal_info['skills']['languages'] = lang_skills
             
             print("技能信息提取完成")
             
-            # 提取所有项目经历
             projects = []
             
-            # 项目1: 人材サイトシステム開発
             project1 = {
                 'name': '人材サイトシステム開発',
                 'period': '2018/06 ~ 2019/12 (19ヶ月)',
@@ -192,7 +135,6 @@ def extract_personal_info(data):
             projects.append(project1)
             print(f"添加项目: {project1['name']}")
             
-            # 项目2: Speedoor旅行サイト開発プロジェクト
             project2 = {
                 'name': 'Speedoor旅行サイト開発プロジェクト',
                 'period': '2020/01 ~ 2021/05 (17ヶ月)',
@@ -209,7 +151,6 @@ def extract_personal_info(data):
             projects.append(project2)
             print(f"添加项目: {project2['name']}")
             
-            # 项目3: 某行政システム開発プロジェクト
             project3 = {
                 'name': '某行政システム開発プロジェクト',
                 'period': '2021/06 ~ 2023/06 (25ヶ月)',
@@ -228,7 +169,6 @@ def extract_personal_info(data):
             projects.append(project3)
             print(f"添加项目: {project3['name']}")
             
-            # 项目4: 重慶鉄鋼L2システム概要
             project4 = {
                 'name': '重慶鉄鋼L2システム概要',
                 'period': '2023/07 ~ 2024/05 (11ヶ月)',
@@ -246,7 +186,6 @@ def extract_personal_info(data):
             projects.append(project4)
             print(f"添加项目: {project4['name']}")
             
-            # 项目5: ファーウェイ・スマートドアロック開発
             project5 = {
                 'name': 'ファーウェイ・スマートドアロック開発',
                 'period': '2024/08 ~ 2025/07 (12ヶ月)',
@@ -270,288 +209,279 @@ def extract_personal_info(data):
     
     return personal_info
 
-def generate_language_html(language_ability):
-    """生成语言能力HTML"""
-    
-    def get_language_level_color(level):
-        if level == 'A':
-            return '#27ae60'  # 绿色 - 母语级
-        elif level == 'B':
-            return '#3498db'  # 蓝色 - 商务级
-        elif level == 'C':
-            return '#f39c12'  # 橙色 - 业务可用
-        elif level == 'D':
-            return '#e74c3c'  # 红色 - 稍有困难
-        else:
-            return '#95a5a6'  # 灰色 - 无等级
-    
-    def get_language_level_text(level):
-        if level == 'A':
-            return '母语级'
-        elif level == 'B':
-            return '商务级'
-        elif level == 'C':
-            return '业务可用'
-        elif level == 'D':
-            return '稍有困难'
-        else:
-            return '未评估'
-    
-    # 生成语言能力表格
-    languages = [
-        {'name': '中文', 'key': 'chinese', 'flag': '🇨🇳'},
-        {'name': '日本語', 'key': 'japanese', 'flag': '🇯🇵'},
-        {'name': 'English', 'key': 'english', 'flag': '🇺🇸'}
-    ]
-    
-    language_rows = ""
-    for lang in languages:
-        lang_data = language_ability[lang['key']]
-        if lang_data['reading'] or lang_data['writing'] or lang_data['conversation']:
-            reading_color = get_language_level_color(lang_data['reading'])
-            writing_color = get_language_level_color(lang_data['writing'])
-            conversation_color = get_language_level_color(lang_data['conversation'])
-            
-            language_rows += f"""
-                <tr>
-                    <td class="language-name">
-                        <span class="language-flag">{lang['flag']}</span>
-                        {lang['name']}
-                    </td>
-                    <td class="language-skill">
-                        <span class="skill-level" style="background-color: {reading_color}">
-                            {lang_data['reading']} ({get_language_level_text(lang_data['reading'])})
-                        </span>
-                    </td>
-                    <td class="language-skill">
-                        <span class="skill-level" style="background-color: {writing_color}">
-                            {lang_data['writing']} ({get_language_level_text(lang_data['writing'])})
-                        </span>
-                    </td>
-                    <td class="language-skill">
-                        <span class="skill-level" style="background-color: {conversation_color}">
-                            {lang_data['conversation']} ({get_language_level_text(lang_data['conversation'])})
-                        </span>
-                    </td>
-                </tr>
-            """
-    
-    return f"""
-        <div class="language-container">
-            <div class="language-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>语言</th>
-                            <th>阅读</th>
-                            <th>写作</th>
-                            <th>会话</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {language_rows}
-                    </tbody>
-                </table>
-            </div>
-            
-            <div class="language-legend">
-                <h4>语言等级说明:</h4>
-                <div class="legend-items">
-                    <span class="legend-item"><span class="legend-color" style="background-color: #27ae60"></span>A - 母语级</span>
-                    <span class="legend-item"><span class="legend-color" style="background-color: #3498db"></span>B - 商务级</span>
-                    <span class="legend-item"><span class="legend-color" style="background-color: #f39c12"></span>C - 业务可用</span>
-                    <span class="legend-item"><span class="legend-color" style="background-color: #e74c3c"></span>D - 稍有困难</span>
-                </div>
-            </div>
-        </div>
-    """
-
-def generate_education_html(education):
-    """生成教育背景HTML"""
-    
-    education_rows = ""
-    for i, edu in enumerate(education, 1):
-        education_rows += f"""
-            <div class="education-item">
-                <div class="education-header">
-                    <h3>{edu['school']}</h3>
-                    <span class="education-period">{edu['period']}</span>
-                </div>
-                <div class="education-details">
-                    <div class="education-info">
-                        <span class="info-tag">专业: {edu['department']}</span>
-                        <span class="info-tag">学位: {edu['degree']}</span>
-                    </div>
-                </div>
-            </div>
-        """
-    
-    return f"""
-        <div class="education-container">
-            {education_rows}
-        </div>
-    """
-
-def generate_skills_html(skills):
-    """生成技能HTML"""
-    
-    def get_level_color(level):
-        if level == 'A':
-            return '#27ae60'  # 绿色 - 熟练
-        elif level == 'B':
-            return '#3498db'  # 蓝色 - 可实践
-        elif level == 'C':
-            return '#f39c12'  # 橙色 - 有经验
-        elif level == 'D':
-            return '#e74c3c'  # 红色 - 基础知识
-        else:
-            return '#95a5a6'  # 灰色 - 无等级
-    
-    def get_level_text(level):
-        if level == 'A':
-            return '熟练'
-        elif level == 'B':
-            return '可实践'
-        elif level == 'C':
-            return '有经验'
-        elif level == 'D':
-            return '基础知识'
-        else:
-            return '未评估'
-    
-    # 生成操作系统技能
-    os_html = ""
-    for skill, level in skills['os'].items():
-        if level:  # 只显示有等级的技能
-            color = get_level_color(level)
-            level_text = get_level_text(level)
-            os_html += f"""
-                <div class="skill-item">
-                    <span class="skill-name">{skill}</span>
-                    <span class="skill-level" style="background-color: {color}">{level} ({level_text})</span>
-                </div>
-            """
-    
-    # 生成数据库技能
-    db_html = ""
-    for skill, level in skills['database'].items():
-        if level:
-            color = get_level_color(level)
-            level_text = get_level_text(level)
-            db_html += f"""
-                <div class="skill-item">
-                    <span class="skill-name">{skill}</span>
-                    <span class="skill-level" style="background-color: {color}">{level} ({level_text})</span>
-                </div>
-            """
-    
-    # 生成工具技能
-    tools_html = ""
-    for skill, level in skills['tools'].items():
-        if level:
-            color = get_level_color(level)
-            level_text = get_level_text(level)
-            tools_html += f"""
-                <div class="skill-item">
-                    <span class="skill-name">{skill}</span>
-                    <span class="skill-level" style="background-color: {color}">{level} ({level_text})</span>
-                </div>
-            """
-    
-    # 生成编程语言技能
-    lang_html = ""
-    for skill, level in skills['languages'].items():
-        if level:
-            color = get_level_color(level)
-            level_text = get_level_text(level)
-            lang_html += f"""
-                <div class="skill-item">
-                    <span class="skill-name">{skill}</span>
-                    <span class="skill-level" style="background-color: {color}">{level} ({level_text})</span>
-                </div>
-            """
-    
-    return f"""
-        <div class="skills-container">
-            <div class="skills-section">
-                <h3>操作系统 (OS)</h3>
-                <div class="skills-grid">
-                    {os_html}
-                </div>
-            </div>
-            
-            <div class="skills-section">
-                <h3>数据库 (Database)</h3>
-                <div class="skills-grid">
-                    {db_html}
-                </div>
-            </div>
-            
-            <div class="skills-section">
-                <h3>开发工具 (Tools)</h3>
-                <div class="skills-grid">
-                    {tools_html}
-                </div>
-            </div>
-            
-            <div class="skills-section">
-                <h3>编程语言 (Languages)</h3>
-                <div class="skills-grid">
-                    {lang_html}
-                </div>
-            </div>
-            
-            <div class="skills-legend">
-                <h4>技能等级说明:</h4>
-                <div class="legend-items">
-                    <span class="legend-item"><span class="legend-color" style="background-color: #27ae60"></span>A - 熟练</span>
-                    <span class="legend-item"><span class="legend-color" style="background-color: #3498db"></span>B - 可实践</span>
-                    <span class="legend-item"><span class="legend-color" style="background-color: #f39c12"></span>C - 有经验</span>
-                    <span class="legend-item"><span class="legend-color" style="background-color: #e74c3c"></span>D - 基础知识</span>
-                </div>
-            </div>
-        </div>
-    """
-
 def generate_html(personal_info):
-    """生成HTML页面"""
-    
-    # 生成技能HTML
-    skills_html = generate_skills_html(personal_info['skills'])
-    
-    # 生成语言能力HTML
-    language_html = generate_language_html(personal_info['language_ability'])
-    
-    # 生成教育背景HTML
-    education_html = generate_education_html(personal_info['education'])
-    
-    # 生成项目经历HTML
-    projects_html = ""
-    for i, project in enumerate(personal_info['projects'], 1):
-        project_html = f"""
-            <div class="project-item">
-                <div class="project-header">
-                    <h3>{project['name']}</h3>
-                    <span class="project-period">{project['period']}</span>
+    # 基本信息部分
+    basic_info_html = f"""
+        <div class="section">
+            <h2>基本信息</h2>
+            <div class="info-row">
+                <div class="info-group">
+                    <div class="info-label">姓名</div>
+                    <div class="info-value">{personal_info['name']}</div>
                 </div>
-                <div class="project-details">
-                    <div class="project-info">
-                        <span class="info-tag">团队: {project['team']}</span>
-                        <span class="info-tag">技术: {project['tech']}</span>
-                        <span class="info-tag">语言: {project['language']}</span>
-                        <span class="info-tag">角色: {project['role']}</span>
+                <div class="info-group">
+                    <div class="info-label">职位</div>
+                    <div class="info-value">{personal_info['position']}</div>
+                </div>
+                <div class="info-group">
+                    <div class="info-label">联系方式</div>
+                    <div class="info-value">{personal_info['contact']}</div>
+                </div>
+            </div>
+    """
+    
+    if personal_info['birth_date']:
+        basic_info_html += f"""
+            <div class="info-row">
+                <div class="info-group">
+                    <div class="info-label">出生年月</div>
+                    <div class="info-value">{personal_info['birth_date']}</div>
+                </div>
+        """
+    if personal_info['age']:
+        basic_info_html += f"""
+                <div class="info-group">
+                    <div class="info-label">年龄</div>
+                    <div class="info-value">{personal_info['age']}岁</div>
+                </div>
+        """
+    if personal_info['nationality']:
+        basic_info_html += f"""
+                <div class="info-group">
+                    <div class="info-label">国籍</div>
+                    <div class="info-value">{personal_info['nationality']}</div>
+                </div>
+        """
+    if personal_info['birth_date'] or personal_info['age'] or personal_info['nationality']:
+        basic_info_html += """
+            </div>
+        """
+    
+    if personal_info['years_in_japan'] or personal_info['work_years'] or personal_info['nearest_station']:
+        basic_info_html += """
+            <div class="info-row">
+        """
+        if personal_info['years_in_japan']:
+            basic_info_html += f"""
+                <div class="info-group">
+                    <div class="info-label">在日年数</div>
+                    <div class="info-value">{personal_info['years_in_japan']}年</div>
+                </div>
+            """
+        if personal_info['work_years']:
+            basic_info_html += f"""
+                <div class="info-group">
+                    <div class="info-label">実務年数</div>
+                    <div class="info-value">{personal_info['work_years']}年</div>
+                </div>
+            """
+        if personal_info['nearest_station']:
+            basic_info_html += f"""
+                <div class="info-group">
+                    <div class="info-label">最寄駅</div>
+                    <div class="info-value">{personal_info['nearest_station']}</div>
+                </div>
+            """
+        basic_info_html += """
+            </div>
+        """
+    
+    basic_info_html += """
+        </div>
+    """
+    
+    # 教育背景部分
+    if personal_info['education']:
+        education_html = ""
+        for edu in personal_info['education']:
+            education_html += f"""
+                <div class="education-item">
+                    <div class="education-header">
+                        <h3>{edu['school']}</h3>
+                        <span class="education-period">{edu['period']}</span>
                     </div>
-                    <div class="project-description">
-                        <h4>主要职责:</h4>
-                        <ul>
-                            {''.join([f'<li>{desc}</li>' for desc in project['description']])}
-                        </ul>
+                    <div class="education-details">
+                        <div class="education-info">
+                            <span class="info-tag">专业: {edu['department']}</span>
+                            <span class="info-tag">学位: {edu['degree']}</span>
+                        </div>
                     </div>
+                </div>
+            """
+        
+        education_section_html = f"""
+            <div class="section education-container">
+                <h2>教育背景</h2>
+                <div class="education-container">
+                    {education_html}
+                </div>
+                <div class="info-item" style="margin-top: 20px;">
+                    <div class="info-label">持续学习</div>
+                    <div class="info-value">{personal_info['learning']}</div>
                 </div>
             </div>
         """
-        projects_html += project_html
+    else:
+        education_section_html = f"""
+            <div class="section">
+                <h2>教育背景</h2>
+                <div class="info-item">
+                    <div class="info-label">学历</div>
+                    <div class="info-value">计算机相关专业</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">持续学习</div>
+                    <div class="info-value">持续关注技术发展趋势, 不断学习新技术</div>
+                </div>
+            </div>
+        """
     
+    # 语言能力部分
+    language_html = ""
+    if personal_info['language_ability']:
+        languages = [
+            {'name': '中文', 'key': 'chinese', 'flag': '🇨🇳'},
+            {'name': '日本語', 'key': 'japanese', 'flag': '🇯🇵'},
+            {'name': 'English', 'key': 'english', 'flag': '🇺🇸'}
+        ]
+        
+        for lang in languages:
+            lang_data = personal_info['language_ability'][lang['key']]
+            if lang_data['reading'] or lang_data['writing'] or lang_data['conversation']:
+                language_html += f"""
+                    <tr>
+                        <td class="language-name">
+                            <span class="language-flag">{lang['flag']}</span>
+                            {lang['name']}
+                        </td>
+                        <td class="language-skill">
+                            <span class="skill-level" style="background-color: #3498db">
+                                {lang_data['reading']} (商务级)
+                            </span>
+                        </td>
+                        <td class="language-skill">
+                            <span class="skill-level" style="background-color: #3498db">
+                                {lang_data['writing']} (商务级)
+                            </span>
+                        </td>
+                        <td class="language-skill">
+                            <span class="skill-level" style="background-color: #f39c12">
+                                {lang_data['conversation']} (业务可用)
+                            </span>
+                        </td>
+                    </tr>
+                """
+        
+        language_section_html = f"""
+            <div class="section language-container">
+                <h2>语言能力</h2>
+                <div class="language-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>语言</th>
+                                <th>阅读</th>
+                                <th>写作</th>
+                                <th>会话</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {language_html}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        """
+    else:
+        language_section_html = ""
+    
+    # 技能部分
+    skills_html = ""
+    if personal_info['skills']:
+        for category, skills in personal_info['skills'].items():
+            if skills:
+                category_name = {
+                    'os': '操作系统 (OS)',
+                    'database': '数据库 (Database)',
+                    'tools': '开发工具 (Tools)',
+                    'languages': '编程语言 (Languages)'
+                }.get(category, category)
+                
+                skills_html += f"""
+                    <div class="skills-section">
+                        <h3>{category_name}</h3>
+                        <div class="skills-grid">
+                """
+                
+                for skill, level in skills.items():
+                    if level:
+                        color = '#27ae60' if level == 'A' else '#3498db' if level == 'B' else '#f39c12' if level == 'C' else '#e74c3c'
+                        level_text = '熟练' if level == 'A' else '可实践' if level == 'B' else '有经验' if level == 'C' else '基础知识'
+                        skills_html += f"""
+                            <div class="skill-item">
+                                <span class="skill-name">{skill}</span>
+                                <span class="skill-level" style="background-color: {color}">{level} ({level_text})</span>
+                            </div>
+                        """
+                
+                skills_html += """
+                        </div>
+                    </div>
+                """
+        
+        skills_section_html = f"""
+            <div class="section skills-container">
+                <h2>专业技能矩阵</h2>
+                {skills_html}
+            </div>
+        """
+    else:
+        skills_section_html = ""
+    
+    # 项目经历部分
+    projects_html = ""
+    if personal_info['projects']:
+        for project in personal_info['projects']:
+            project_desc_html = ""
+            for desc in project['description']:
+                project_desc_html += f"<li>{desc}</li>"
+            
+            projects_html += f"""
+                <div class="project-item">
+                    <div class="project-header">
+                        <h3>{project['name']}</h3>
+                        <span class="project-period">{project['period']}</span>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-info">
+                            <span class="info-tag">团队: {project['team']}</span>
+                            <span class="info-tag">技术: {project['tech']}</span>
+                            <span class="info-tag">语言: {project['language']}</span>
+                            <span class="info-tag">角色: {project['role']}</span>
+                        </div>
+                        <div class="project-description">
+                            <h4>主要职责:</h4>
+                            <ul>
+                                {project_desc_html}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            """
+        
+        projects_section_html = f"""
+            <div class="section projects-section">
+                <h2>项目经历 ({len(personal_info['projects'])}个项目)</h2>
+                {projects_html}
+            </div>
+        """
+    else:
+        projects_section_html = ""
+    
+    # 组合所有部分
+    content_html = basic_info_html + education_section_html + language_section_html + skills_section_html + projects_section_html
+    
+    # 完整的HTML
     html_content = f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -602,13 +532,6 @@ def generate_html(personal_info):
         
         .content {{
             display: block;
-        }}
-        
-        .basic-info-grid {{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 25px;
-            margin-bottom: 30px;
         }}
         
         .section {{
@@ -804,7 +727,6 @@ def generate_html(personal_info):
             font-size: 0.95em;
         }}
         
-        /* 技能样式 */
         .skills-container {{
             grid-column: 1 / -1;
         }}
@@ -858,41 +780,6 @@ def generate_html(personal_info):
             text-align: center;
         }}
         
-        .skills-legend {{
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 12px;
-            margin-top: 30px;
-            border: 2px solid #ecf0f1;
-        }}
-        
-        .skills-legend h4 {{
-            color: #2c3e50;
-            margin-bottom: 15px;
-            font-size: 1.1em;
-        }}
-        
-        .legend-items {{
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }}
-        
-        .legend-item {{
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.9em;
-            color: #555;
-        }}
-        
-        .legend-color {{
-            width: 16px;
-            height: 16px;
-            border-radius: 4px;
-        }}
-        
-        /* 语言能力样式 */
         .language-container {{
             grid-column: 1 / -1;
         }}
@@ -952,14 +839,6 @@ def generate_html(personal_info):
             min-width: 100px;
         }}
         
-        .language-legend {{
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 12px;
-            border: 2px solid #ecf0f1;
-        }}
-        
-        /* 教育背景样式 */
         .education-container {{
             grid-column: 1 / -1;
         }}
@@ -1025,11 +904,6 @@ def generate_html(personal_info):
                 grid-template-columns: 1fr;
             }}
             
-            .legend-items {{
-                flex-direction: column;
-                gap: 10px;
-            }}
-            
             .language-table {{
                 font-size: 0.9em;
             }}
@@ -1050,79 +924,7 @@ def generate_html(personal_info):
         </div>
         
         <div class="content">
-            <div class="section">
-                <h2>基本信息</h2>
-                <div class="info-row">
-                    <div class="info-group">
-                        <div class="info-label">姓名</div>
-                        <div class="info-value">{personal_info['name']}</div>
-                    </div>
-                    <div class="info-group">
-                        <div class="info-label">职位</div>
-                        <div class="info-value">{personal_info['position']}</div>
-                    </div>
-                    <div class="info-group">
-                        <div class="info-label">联系方式</div>
-                        <div class="info-value">{personal_info['contact']}</div>
-                    </div>
-                </div>
-                
-                <div class="info-row">
-                    {f"<div class='info-group'><div class='info-label'>出生年月</div><div class='info-value'>{personal_info['birth_date']}</div></div>" if personal_info['birth_date'] else ""}
-                    {f"<div class='info-group'><div class='info-label'>年龄</div><div class='info-value'>{personal_info['age']}岁</div></div>" if personal_info['age'] else ""}
-                    {f"<div class='info-group'><div class='info-label'>国籍</div><div class='info-value'>{personal_info['nationality']}</div></div>" if personal_info['nationality'] else ""}
-                </div>
-                
-                <div class="info-row">
-                    {f"<div class='info-group'><div class='info-label'>在日年数</div><div class='info-value'>{personal_info['years_in_japan']}年</div></div>" if personal_info['years_in_japan'] else ""}
-                    {f"<div class='info-group'><div class='info-label'>実務年数</div><div class='info-value'>{personal_info['work_years']}年</div></div>" if personal_info['work_years'] else ""}
-                    {f"<div class='info-group'><div class='info-label'>最寄駅</div><div class='info-value'>{personal_info['nearest_station']}</div></div>" if personal_info['nearest_station'] else ""}
-                </div>
-            </div>
-            
-            """ + (f"""
-            <div class="section education-container">
-                <h2>教育背景</h2>
-                {education_html}
-                <div class="info-item" style="margin-top: 20px;">
-                    <div class="info-label">持续学习</div>
-                    <div class="info-value">{personal_info['learning']}</div>
-                </div>
-            </div>
-            """ if personal_info['education'] else """
-            <div class="section">
-                <h2>教育背景</h2>
-                <div class="info-item">
-                    <div class="info-label">学历</div>
-                    <div class="info-value">计算机相关专业</div>
-                </div>
-                <div class="info-item">
-                    <div class="info-label">持续学习</div>
-                    <div class="info-value">持续关注技术发展趋势, 不断学习新技术</div>
-                </div>
-            </div>
-            """) + """
-            
-            {f"""
-            <div class="section language-container">
-                <h2>语言能力</h2>
-                {language_html}
-            </div>
-            """ if personal_info['language_ability'] else ""}
-            
-            {f"""
-            <div class="section skills-container">
-                <h2>专业技能矩阵</h2>
-                {skills_html}
-            </div>
-            """ if personal_info['skills'] else ""}
-            
-            {f"""
-            <div class="section projects-section">
-                <h2>项目经历 ({len(personal_info['projects'])}个项目)</h2>
-                {projects_html}
-            </div>
-            """ if personal_info['projects'] else ""}
+            {content_html}
         </div>
         
         <div class="footer">
@@ -1132,18 +934,16 @@ def generate_html(personal_info):
     </div>
 </body>
 </html>"""
+    
     return html_content
 
 def main():
-    """主函数"""
     excel_file = "技術者経歴書(Y.TK).xlsx"
     
-    # 检查Excel文件是否存在
     if not os.path.exists(excel_file):
         print(f"警告: 找不到文件 {excel_file}, 将使用默认数据")
         data = None
     else:
-        # 读取Excel数据
         print("正在读取Excel文件...")
         data = read_excel_data(excel_file)
     
@@ -1151,7 +951,6 @@ def main():
         print("Excel文件读取成功!")
         print(f"数据形状: {data.shape}")
         
-        # 提取个人信息
         print("正在提取个人信息...")
         personal_info = extract_personal_info(data)
         print(f"最终提取到的姓名: {personal_info['name']}")
@@ -1160,11 +959,9 @@ def main():
         print("使用默认数据生成页面...")
         personal_info = extract_personal_info(None)
     
-    # 生成HTML内容
     print("\n正在生成HTML页面...")
     html_content = generate_html(personal_info)
     
-    # 写入HTML文件
     with open("index.html", "w", encoding="utf-8") as f:
         f.write(html_content)
     
