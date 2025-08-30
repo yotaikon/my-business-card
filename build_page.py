@@ -1149,12 +1149,12 @@ def main():
     
     # 检查Excel文件是否存在
     if not os.path.exists(excel_file):
-        print(f"错误: 找不到文件 {excel_file}")
-        return
-    
-    # 读取Excel数据
-    print("正在读取Excel文件...")
-    data = read_excel_data(excel_file)
+        print(f"警告: 找不到文件 {excel_file}，将使用默认数据")
+        data = None
+    else:
+        # 读取Excel数据
+        print("正在读取Excel文件...")
+        data = read_excel_data(excel_file)
     
     if data is not None:
         print("Excel文件读取成功!")

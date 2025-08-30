@@ -30,9 +30,21 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           
+      - name: List files
+        run: |
+          echo "Current directory contents:"
+          ls -la
+          echo "Checking if Excel file exists:"
+          ls -la *.xlsx || echo "No Excel files found"
+          
       - name: Generate HTML
-        run: python build_page.py
-        
+        run: |
+          echo "Starting Python script..."
+          python build_page.py
+          echo "Python script completed successfully"
+          echo "Checking if index.html was created:"
+          ls -la index.html || echo "index.html not found"
+          
       - name: Setup Pages
         uses: actions/configure-pages@v4
         
